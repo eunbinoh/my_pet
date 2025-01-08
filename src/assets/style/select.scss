@@ -1,0 +1,10 @@
+@import "./_mixins.scss";
+
+select {
+  @include input_select_style();
+  @include disabled();
+
+  background: url("~@/assets/icon/arrow_under.svg");
+  background-size: 1.5em;
+  padding-right: 1.3em;
+}

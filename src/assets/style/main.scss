@@ -1,0 +1,39 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./color.scss";
+@import "./screen.scss";
+
+
+html {
+    font-family: "Noto Sans KR", sans-serif;
+    color: var(--black9);
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  main {
+    min-height: 100vh;
+  }
+  
+  @include desktop {
+    html,
+    body,
+    #app {
+      min-width: 300px; 
+      min-height: 100vh;
+    }
+  }
+  
+  @include mobile {
+    html,
+    body,
+    #app {
+      min-width: 360px;
+    }
+  }
+  
+  .text-underline {
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+  

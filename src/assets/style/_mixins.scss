@@ -1,0 +1,35 @@
+@mixin input_select_style {
+  @apply desktop:p-3 mobile:p-[10px] desktop:h-12 mobile:h-[42px] desktop:text-lg mobile:text-base;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0;
+  appearance: none;
+
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+
+  caret-color: var(--primary);
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--black9);
+}
+@mixin disabled {
+  &:disabled {
+    color: var(--black5);
+    border-bottom: 2px solid var(--black3);
+    background-color: var(--black1);
+
+    &::placeholder {
+      color: var(--black5); 
+      background-color: var(--black1);
+    }
+  }
+}
+@mixin notDisabled {
+  &:disabled {
+    background-color: transparent;
+    border-bottom: 2px solid var(--black9);
+    color: var(--black9);
+  }
+}

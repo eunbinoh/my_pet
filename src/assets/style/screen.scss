@@ -1,0 +1,55 @@
+/*
+  Viewport common
+*/
+$container-margin-x: 20px; 
+
+/*
+  Mobile
+*/
+$container-mobile: 100%;
+$breakpoint-mobile-min: 300px;
+$breakpoint-mobile-max: 360px;
+
+/*
+  Web
+*/
+$container-web: 390px;
+$breakpoint-web-min: 361px;
+
+$max-width-web-to-mobile: 390px;
+$min-width-mobile: 360px;
+
+/*
+  header height
+*/
+$header-height-web: 80px;
+$header-height-web-sub: 60px;
+$header-height-mobile: 50px;
+
+
+
+@mixin web {
+  @media screen and (min-width: #{$breakpoint-web-min}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: #{$breakpoint-mobile-max}) {
+    @content;
+  }
+}
+
+@include web {
+  .container {
+    width: $container-web;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@include mobile {
+  .container {
+    width: calc(#{$container-mobile} - #{$container-margin-x} * 2);
+    margin-left: $container-margin-x;
+    margin-right: $container-margin-x;
+  }
+}
