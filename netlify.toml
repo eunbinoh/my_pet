@@ -1,0 +1,7 @@
+[build]
+  command = "yarn install && yarn build"
+  publish = "build"
+  functions = "functions"
+
+[build.environment]
+  NODE_VERSION = "20.0.0"
