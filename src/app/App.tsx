@@ -2,7 +2,7 @@ import './style/App.scss'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useLoadState } from './hooks/useLoadState';
-import Home from '../pages/home/home.tsx';
+import Home from '../pages/home/Home';
 import SignIn from '../pages/sign-in/SignIn';
 import PetShop from '../pages/pet-shop/PetShop';
 
