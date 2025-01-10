@@ -1,0 +1,30 @@
+select {
+  @apply desktop:p-3 mobile:p-[10px] desktop:h-12 mobile:h-[42px] desktop:text-lg mobile:text-base;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0;
+  appearance: none;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  caret-color: var(--primary);
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--black9);
+  background: url("~@/assets/icon/arrow_under.svg");
+  background-size: 1.5em;
+  padding-right: 1.3em;
+}
+select:disabled {
+  color: var(--black5);
+  border-bottom: 2px solid var(--black3);
+  background-color: var(--black1);
+}
+select:disabled::-moz-placeholder {
+  color: var(--black5);
+  background-color: var(--black1);
+}
+select:disabled::placeholder {
+  color: var(--black5);
+  background-color: var(--black1);
+}/*# sourceMappingURL=select.css.map */

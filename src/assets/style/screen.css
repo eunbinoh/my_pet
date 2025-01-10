@@ -1,0 +1,26 @@
+/*
+  Viewport common
+*/
+/*
+  Mobile
+*/
+/*
+  Web
+*/
+/*
+  header height
+*/
+@media screen and (min-width: 361px) {
+  .container {
+    width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 360px) {
+  .container {
+    width: calc(100% - 20px * 2);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}/*# sourceMappingURL=screen.css.map */

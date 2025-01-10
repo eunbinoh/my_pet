@@ -6,6 +6,7 @@
 
 # add library
 - zustand
+- react-router-dom, @types/react-router-dom
 - eslint  
 - @typescript-eslint/eslint-plugin @typescript-eslint/parser
 - prettier

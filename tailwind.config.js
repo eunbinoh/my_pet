@@ -4,12 +4,12 @@ const colors = require('./src/assets/style/colors.js')
 
 export default {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     screens: screens,
     colors: colors
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 }
 
