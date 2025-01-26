@@ -13,12 +13,12 @@
 - eslint-config-prettier (lint-prettier 충돌방지)
 - vitest (test)
 - sass
-- tailwindcss 
+- yarn add tailwindcss postcss autoprefixer
+
 
 # FSD (Feature Sliced Design)
 - layout component -> features
 
-- git branch filter test init
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

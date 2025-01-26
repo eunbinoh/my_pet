@@ -2,5 +2,8 @@
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
+  ],
+  "include": [
+    "src/global.d.ts" 
   ]
 }
