@@ -1,9 +1,6 @@
-import { ReactNode } from 'react';
 import Footer from '../footer/footer';
-
-interface ContentsProps {
-  children: ReactNode;
-}
+import ItemBoxLine from '../../features/itemBoxLine';
+import { items } from '../../entities/items';
 
 const homeContainer = ({children}: ContentsProps) => {
   return (
@@ -15,7 +12,7 @@ const homeContainer = ({children}: ContentsProps) => {
       <div className='home-container'>
         <div className='inline-split'>
           <div className='half round-card small'>
-            <h3>쇼핑하러 가기2</h3>
+            <h3>쇼핑하러 가기</h3>
           </div>
           <div className='half round-card small'>
             <h3>케어하러 가기</h3>
@@ -28,6 +25,13 @@ const homeContainer = ({children}: ContentsProps) => {
 
         <div className='recommend-box'>
           <h3>_____님을 위한 추천 상품</h3>
+          {
+            items.recommendItems.map((item,index)=> (
+              <ItemBoxLine key={item.id} item={item} index={index} />
+            ))
+          }
+          <hr/>
+          <span className='text-base text-center'>{ `추천상품 더 보기 >` }</span>
         </div>
 
         <div className='recommend-box'>
