@@ -15,7 +15,7 @@ const homeContainer = ({children}: ContentsProps) => {
       <div className='home-container'>
         <div className='inline-split'>
           <div className='half round-card small'>
-            <h3>쇼핑하러 가기</h3>
+            <h3>쇼핑하러 가기2</h3>
           </div>
           <div className='half round-card small'>
             <h3>케어하러 가기</h3>
