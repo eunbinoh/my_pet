@@ -13,6 +13,7 @@
     "watch:css": "tailwindcss -i ./src/assets/style/tailwind.scss -o ./dist/tailwind.scss --watch"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
     "autoprefixer": "^10.4.20",
     "eslint-config-prettier": "^9.1.0",
     "postcss": "^8.5.1",
