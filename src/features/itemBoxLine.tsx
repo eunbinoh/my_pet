@@ -1,6 +1,6 @@
 const itemBoxLine = ({item, index}:any) => {
   return (
-    <div className='item-line'>
+    <div className='item-line pointer'>
       <div className='item-box'>
         <div className='img'>
           <div>{index+1}</div>

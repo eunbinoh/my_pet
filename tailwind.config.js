@@ -1,15 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-const { screens } = require('./src/assets/style/screen.js')
-const colors = require('./src/assets/style/colors.js')
-
 export default {
-  content: [
-    "./src/**/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./index.html","./src/**/*.{js,jsx,ts,tsx}"], 
+  mode: "jit", //Just-In-Time
   theme: {
-    screens: screens,
-    colors: colors
+    extend: {},
   },
-  plugins: [require("@tailwindcss/typography")],
-}
-
+  plugins: [],
+};

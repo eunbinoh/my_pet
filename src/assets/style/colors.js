@@ -1,4 +1,4 @@
-module.exports = {
+export default {  
     transparent: "var(--transparent)",
     blue: "var(--primary)",
     red: "var(--red)",

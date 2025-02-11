@@ -1,5 +1,6 @@
-import './style/App.scss'
+import '../global.css'
 import './style/index.css'
+import './style/App.scss'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useLoadState } from './hooks/useLoadState';
