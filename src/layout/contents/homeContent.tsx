@@ -1,5 +1,6 @@
 import Footer from '../footer/footer';
 import ItemBoxLine from '../../features/itemBoxLine';
+import BannerPaging from '../../shared/elements/BannerPaging'
 import { items } from '../../entities/items';
 
 const homeContainer = ({children}: ContentsProps) => {
@@ -8,6 +9,7 @@ const homeContainer = ({children}: ContentsProps) => {
       <div>{children}</div>
       <div className='banner-box'>
         <h3>Banner</h3>
+        <BannerPaging />
       </div>
       <div className='home-container'>
         <div className='inline-split'>

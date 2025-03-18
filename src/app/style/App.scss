@@ -84,15 +84,44 @@
   }
 }
 
+.banner-paging{
+  display: flex;
+  float: right;
+  padding-right: 15px;
+  padding-top: 90px;
+  .paging-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 48px;
+    height: 24px;
+    padding: auto auto;
+    background-color: rgba(#000,0.5);
+    border-radius: 100px;
+    box-shadow: #888888;
+    span{
+      font-size: 12px;
+      font-weight: 700;
+      color: #888888;
+    }
+    .current{
+      color: #fff;
+    }
+  }
+}
+
+
+
 .banner-box {
   background-color: #D9D9D9;
   height: 170px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flexbox;
   text-align: center;
-  span{
-    font-size: 16px;
+  h3{
+    margin: auto 0px;
+    justify-content: center;
+    font-size: 18px;
     font-weight: 700;
   }
 }
@@ -144,3 +173,4 @@
 .pointer{
   cursor: pointer;
 }
+
