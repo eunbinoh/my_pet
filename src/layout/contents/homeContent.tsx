@@ -1,5 +1,6 @@
 import Footer from '../footer/footer';
 import ItemBoxLine from '../../features/itemBoxLine';
+import HospitalBoxLine from '../../features/hospitalBoxLine';
 import BannerPaging from '../../shared/elements/BannerPaging'
 import { items } from '../../entities/items';
 
@@ -33,11 +34,20 @@ const homeContainer = ({children}: ContentsProps) => {
             ))
           }
           <hr/>
-          <span className='text-base text-center pointer'>{ `추천상품 더 보기 >` }</span>
+          <span style={{marginTop:'15px'}} className='title_type_A'>추천 상품 더 보기 {'>'}</span>
         </div>
 
         <div className='recommend-box'>
           <h3>_____님을 위한 추천 병원</h3>
+            {
+              items.recommendHospitals
+                .filter((_, index) => index < 4)
+                .map((item,index)=> (
+                  <HospitalBoxLine key={item.id} item={item} index={index} />
+                ))
+            }
+          <hr/>
+          <span style={{marginTop:'15px'}} className='title_type_A'>추천 병원 더 보기 {'>'}</span>
         </div>
 
         <div className='round-card large pointer'>
