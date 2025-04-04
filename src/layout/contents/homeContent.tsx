@@ -3,8 +3,14 @@ import ItemBoxLine from '../../features/itemBoxLine';
 import HospitalBoxLine from '../../features/hospitalBoxLine';
 import BannerPaging from '../../shared/elements/BannerPaging'
 import { items } from '../../entities/items';
+import { useNavigate } from 'react-router-dom';
 
 const homeContainer = ({children}: ContentsProps) => {
+  const navigate = useNavigate();
+  const goToShop = () => {
+    navigate('/shop')
+  }
+  
   return (
     <>
       <div>{children}</div>
@@ -15,7 +21,7 @@ const homeContainer = ({children}: ContentsProps) => {
       <div className='home-container'>
         <div className='inline-split'>
           <div className='half round-card small pointer text-red'>
-            <h3 className='text-red hidden'>쇼핑하러 가기</h3>
+            <h3 onClick={goToShop}>쇼핑하러 가기</h3>
           </div>
           <div className='text-red half round-card small pointer'>
             <h3>케어하러 가기</h3>

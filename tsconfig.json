@@ -4,6 +4,6 @@
     { "path": "./tsconfig.app.json" },
   ],
   "include": [
-    "src/global.d.ts" 
+    "./shared/type/global.d.ts" 
   ]
 }
