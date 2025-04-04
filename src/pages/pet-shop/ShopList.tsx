@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useEffect } from "react";
 import useItemStore from "../../shared/stores/userItemStore";
 import ItemBoxLineHalf from '../../features/itemBoxLineHalf';
