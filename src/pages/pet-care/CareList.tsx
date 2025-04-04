@@ -6,13 +6,13 @@ import Header from "../../layout/header/logo-header";
 
 const CareList = () => {
   const { hotItems, fetchItems } = useItemStore();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const movePage = ( path : string) => {
-    navigate(path)
-  }
+  // const movePage = ( path : string) => {
+  //   navigate(path)
+  // }
 
-  const handleMainTab = (tabIndex: number) => {
+  const handleMainTab = () => {
   }
 
   useEffect(()=> {
