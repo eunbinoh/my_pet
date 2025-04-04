@@ -1,6 +1,6 @@
-const itemBoxLine = ({item, index}:any) => {
+const itemBoxListShort = ({item, index}:any) => {
   return (
-    <div className='item-line pointer'>
+    <div className='item-line-list pointer'>
       <div className='item-box'>
         <div className='img'>
           <div>{index+1}</div>
@@ -15,4 +15,4 @@ const itemBoxLine = ({item, index}:any) => {
   );
 }
 
-export default itemBoxLine;
+export default itemBoxListShort;

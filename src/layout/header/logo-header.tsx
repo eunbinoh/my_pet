@@ -4,11 +4,12 @@ type HeaderProps = {
   hasHeadTab?: boolean;
   tabTitles?: string[];
   handleTab?: (tabIndex: number) => void;
+  targetTab?: number;
 };
 
-const header: React.FC<HeaderProps> = ({ hasHeadTab, tabTitles, handleTab }) => {
-  const [ activeTab, setActiveTab ] = useState<number>(0);
-  console.log(activeTab, hasHeadTab, tabTitles)
+const header: React.FC<HeaderProps> = ({ hasHeadTab, tabTitles, handleTab, targetTab }) => {
+  const [ activeTab, setActiveTab ] = useState<number>(targetTab ?? 0);
+
   const clickTabs = (tabIndex: number) => {
     handleTab ? handleTab(tabIndex) : null;
     setActiveTab(tabIndex);
@@ -25,6 +26,7 @@ const header: React.FC<HeaderProps> = ({ hasHeadTab, tabTitles, handleTab }) => 
           { 
             tabTitles.map((tab, index) => (
               <button 
+                key={index}
                 className={ activeTab === index ? 'active' : ''} 
                 onClick={ () => clickTabs(index) }
               >

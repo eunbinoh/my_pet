@@ -4,10 +4,13 @@ import './style/App.scss'
 
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { useLoadState } from './hooks/useLoadState';
+import Gnb from '../layout/footer/gnb';
 import Home from '../pages/home/Home';
 import SignIn from '../pages/sign-in/SignIn';
 import PetShop from '../pages/pet-shop/PetShop';
-import Gnb from '../layout/footer/gnb';
+import PetCare from '../pages/pet-care/PetCare';
+import ShopList from '../pages/pet-shop/ShopList';
+import CareList from '../pages/pet-care/CareList';
 
 const App = () => {
   useLoadState();
@@ -18,7 +21,9 @@ const App = () => {
         <Route path='/' element={<Navigate to="/home" replace />} />
         <Route path='/home' element={<Home/>} />
         <Route path='/shop' element={<PetShop/>} />
-        <Route path='/care' element={<PetShop/>} />
+        <Route path='/shop-list' element={<ShopList/>} />
+        <Route path='/care' element={<PetCare/>} />
+        <Route path='/care-list' element={<CareList/>} />
         <Route path='/signin' element={<SignIn/>} />
       </Routes>
       <Gnb />
