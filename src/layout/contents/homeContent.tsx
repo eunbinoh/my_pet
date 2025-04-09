@@ -48,8 +48,8 @@ const homeContainer = ({children}: ContentsProps) => {
             {
               items.recommendHospitals
                 .filter((_, index) => index < 4)
-                .map((item,index)=> (
-                  <ItemBoxLineHalf key={item.id} item={item} index={index} />
+                .map((item)=> (
+                  <ItemBoxLineHalf key={item.id} item={item} onClick={()=>movePage('/item')}/>
                 ))
             }
           <hr/>
