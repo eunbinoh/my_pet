@@ -32,13 +32,13 @@ const CareList = () => {
       <div className='home-container'>
         <div className='item-list-box'>
             {
-              hotItems.map((hot,index:number) => (
-                <ItemBoxLineHalf key={hot.id} item={hot} index={index} />
+              hotItems.map((hot) => (
+                <ItemBoxLineHalf key={hot.id} item={hot} onClick={()=>handleMainTab}/>
               ))
             }
             {
-              hotItems.map((hot,index:number) => (
-                <ItemBoxLineHalf key={hot.id} item={hot} index={index} />
+              hotItems.map((hot) => (
+                <ItemBoxLineHalf key={hot.id} item={hot} onClick={()=>handleMainTab}/>
               ))
             }
         </div>
