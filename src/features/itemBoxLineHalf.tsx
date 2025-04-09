@@ -1,6 +1,6 @@
-const itemBoxLineHalf = ({item}:any) => {
+const itemBoxLineHalf = ({item, onClick}: { item: any; onClick: () => void }) => {
   return (
-    <div className='item-line-half pointer'>
+    <div className='item-line-half pointer' onClick={onClick}>
         <div className='item-box'/>
         <div className='info_place'>{ item.brandName }</div>
         <div className='info_name'>{ item.itemName }</div>

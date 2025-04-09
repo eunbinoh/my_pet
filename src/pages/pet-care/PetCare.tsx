@@ -28,17 +28,17 @@ const PetShop = () => {
       </div>
       <div className='home-container'>
         <div className='inline-split'>
-          <div className='half round-card small pointer'>
-            <h3 onClick={()=>movePage('/care-list',0)}>병원</h3>
-          </div>
-          <div className='half round-card small pointer'>
-            <h3 onClick={()=>movePage('/care-list',2)}>미용</h3>
-          </div>
+          <button className='half round-card small pointer' onClick={()=>movePage('/care-list',0)}>
+            병원
+          </button>
+          <button className='half round-card small pointer' onClick={()=>movePage('/care-list',2)}>
+            미용
+          </button>
         </div>
         <div className='inline-split'>
-          <div className='full round-card small pointer'>
-            <h3 onClick={()=>movePage('/care-list',1)}>반려동물 호텔</h3>
-          </div>
+          <button className='full round-card small pointer' onClick={()=>movePage('/care-list',1)}>
+            반려동물 호텔
+          </button>
         </div>
 
         <div className='recommend-box'>

@@ -11,6 +11,7 @@ import PetShop from '../pages/pet-shop/PetShop';
 import PetCare from '../pages/pet-care/PetCare';
 import ShopList from '../pages/pet-shop/ShopList';
 import CareList from '../pages/pet-care/CareList';
+import ShopDetail from '../pages/pet-shop/ShopDetail';
 
 const App = () => {
   useLoadState();
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/home' element={<Home/>} />
         <Route path='/shop' element={<PetShop/>} />
         <Route path='/shop-list' element={<ShopList/>} />
+        <Route path='/item' element={<ShopDetail/>} />
         <Route path='/care' element={<PetCare/>} />
         <Route path='/care-list' element={<CareList/>} />
         <Route path='/signin' element={<SignIn/>} />

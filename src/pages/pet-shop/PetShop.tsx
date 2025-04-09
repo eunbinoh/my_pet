@@ -29,12 +29,12 @@ const PetShop = () => {
       </div>
       <div className='home-container'>
         <div className='inline-split'>
-          <div className='half round-card small pointer'>
-            <h3 onClick={()=>movePage('/shop-list',0)}>사료</h3>
-          </div>
-          <div className='half round-card small pointer'>
-            <h3 onClick={()=>movePage('/shop-list',1)}>간식</h3>
-          </div>
+          <button className='half round-card small pointer' onClick={()=>movePage('/shop-list',0)}>
+            사료
+          </button>
+          <button className='half round-card small pointer' onClick={()=>movePage('/shop-list',1)}>
+            간식
+          </button>
         </div>
 
         <div className='marketing-item-box'>

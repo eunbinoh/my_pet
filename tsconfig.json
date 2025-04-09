@@ -5,5 +5,11 @@
   ],
   "include": [
     "./shared/type/global.d.ts" 
-  ]
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
 }

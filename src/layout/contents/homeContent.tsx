@@ -20,12 +20,12 @@ const homeContainer = ({children}: ContentsProps) => {
       </div>
       <div className='home-container'>
         <div className='inline-split'>
-          <div className='half round-card small pointer'>
-            <h3 onClick={() => movePage('/shop')}>쇼핑하러 가기</h3>
-          </div>
-          <div className='text-red half round-card small pointer'>
-            <h3 onClick={() => movePage('/care')}>케어하러 가기</h3>
-          </div>
+          <button className='half round-card small pointer' onClick={()=>movePage('/shop')}>
+            쇼핑하러 가기
+          </button>
+          <button className='half round-card small pointer' onClick={()=>movePage('/care')}>
+            케어하러 가기
+          </button>
         </div>
         <div className='round-card large pointer'>
           <h2>Banner</h2>
