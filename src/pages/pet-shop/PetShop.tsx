@@ -17,7 +17,7 @@ const PetShop = () => {
     navigate('/shop-detail',{ state: { itemId }});
   }
 
-  const handleMainTab = (tabIndex: number) => {
+  const handleMainTab = () => {
   }
 
   useEffect(()=> {
