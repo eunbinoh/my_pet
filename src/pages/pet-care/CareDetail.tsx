@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import useItemStore from "../../shared/stores/userItemStore";
 import Header from "../../layout/header/back-header";
 
-const ShopDetail = () => {
+const CareDetail = () => {
   const { hotItems, fetchItems } = useItemStore();
   const location = useLocation();
 
@@ -41,9 +41,9 @@ const ShopDetail = () => {
         <div className='gap-term'/>
         <div className='content_title'>문의</div>
         <div className='gap-term'/>
-        <div className='content_title'>함께보면 좋은 상품</div>
+        <div className='content_title'>추천케어</div>
       </div>
     </>
   )
 }
-export default ShopDetail;
+export default CareDetail;

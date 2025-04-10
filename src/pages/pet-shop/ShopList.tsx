@@ -11,8 +11,7 @@ const ShopList = () => {
   const tabIndex = location.state?.tab ?? 0;
 
   const movePage = ( itemId : string) => {
-    console.log(itemId, 22)
-    navigate('/item',{ state: { itemId }});
+    navigate('/item-detail',{ state: { itemId }});
   }
 
   const handleMainTab = () => {

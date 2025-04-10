@@ -48,6 +48,7 @@ button {
     width: 24px;
     height: 24px;
     margin: 18px 10px;
+    cursor: pointer;
   }
 }
 
@@ -340,8 +341,6 @@ button {
   }
 }
 
-
-
 .banner-box {
   background-color: #D9D9D9;
   height: 170px;
@@ -355,7 +354,6 @@ button {
     font-weight: 700;
   }
 }
-
 
 .foot-info{
   margin-top: 50px;
@@ -397,6 +395,26 @@ button {
       height: 30px;
       background-color: #D9D9D9;
     }
+  }
+}
+
+.foot-box{
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  height: 66px;
+  min-width: 360px;
+  display: inline-flex;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 8px;
+  button{
+    height: 44px;
+    width: 136px;
+    background-color: #fff;
+    color:#000;
+    font-size: 16px;
+    border: 1px solid #ddd;
   }
 }
 

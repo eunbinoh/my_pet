@@ -9,8 +9,12 @@ const PetShop = () => {
   const navigate = useNavigate();
   
   
-  const movePage = ( path : string, tab? : number) => {
+  const moveToList = ( path : string, tab? : number) => {
     navigate(path, tab ? { state: { tab }} : {});
+  }
+
+  const moveToDetail = ( path : string, itemId? : string) => {
+    navigate('/item-detail', itemId ? { state: { itemId }} : {});
   }
 
   const handleMainTab = (tabIndex: number) => {
@@ -29,10 +33,10 @@ const PetShop = () => {
       </div>
       <div className='home-container'>
         <div className='inline-split'>
-          <button className='half round-card small pointer' onClick={()=>movePage('/shop-list',0)}>
+          <button className='half round-card small pointer' onClick={()=>moveToList('/shop-list',0)}>
             사료
           </button>
-          <button className='half round-card small pointer' onClick={()=>movePage('/shop-list',1)}>
+          <button className='half round-card small pointer' onClick={()=>moveToList('/shop-list',1)}>
             간식
           </button>
         </div>
@@ -43,7 +47,7 @@ const PetShop = () => {
           {
             hotItems
             .map((item,index)=> (
-              <ItemBoxSideLine key={item.id} item={item} index={index} />
+              <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
             ))
           }
           </div>
@@ -53,7 +57,7 @@ const PetShop = () => {
           <div className='side-inline'>
             {
               newItems.map((item,index:number) => (
-                <ItemBoxSideLine key={item.id} item={item} index={index} />
+                <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
               ))
             }
           </div>
@@ -68,7 +72,7 @@ const PetShop = () => {
           <div className='side-inline'>
             {
               hotItems.map((item,index:number) => (
-                <ItemBoxSideLine key={item.id} item={item} index={index} />
+                <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
               ))
             }
             </div>
@@ -79,7 +83,7 @@ const PetShop = () => {
           <div className='side-inline'>
             {
               newItems.map((item,index:number) => (
-                <ItemBoxSideLine key={item.id} item={item} index={index} />
+                <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
               ))
             }
           </div>
