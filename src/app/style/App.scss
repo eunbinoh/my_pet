@@ -352,9 +352,8 @@ button {
   white-space: nowrap;
   box-sizing: border-box;
 
-  width: calc(90vw - 120px);
-  // max-width: 100%;
-  margin: 0 auto;
+  max-width: 330px;
+  margin: 0 0px;
 }
 
 .item-line-side{
@@ -393,6 +392,8 @@ button {
     font-size: 14px;
     font-weight: 700;
     margin-top: 2px;
+    max-width: 135px;
+    overflow: hidden;
   }
   .score_review_line{
     display: inline-flex;
