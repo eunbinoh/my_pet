@@ -13,12 +13,11 @@ const PetShop = () => {
     navigate(path, tab ? { state: { tab }} : {});
   }
 
-  const moveToDetail = ( path : string, itemId? : string) => {
-    navigate('/item-detail', itemId ? { state: { itemId }} : {});
+  const moveToDetail = ( itemId : string) => {
+    navigate('/shop-detail',{ state: { itemId }});
   }
 
   const handleMainTab = (tabIndex: number) => {
-    console.log('tab index:',tabIndex)
   }
 
   useEffect(()=> {
@@ -27,7 +26,7 @@ const PetShop = () => {
 
   return (
     <>
-      <Header hasHeadTab={true} handleTab={ handleMainTab } tabTitles={['푸드','헬스']}/>
+      <Header hasHeadTab handleTab={ handleMainTab } tabTitles={['푸드','헬스']}/>
       <div className='banner-box'>
         <h3>Banner</h3>
       </div>

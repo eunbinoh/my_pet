@@ -3,10 +3,10 @@ type Props = {
 }
 
 const footer = ({ type } : Props) => {
-
+console.log(`foot-box ${type === 'cart' ? 'cart' : 'reserve'}`)
   return (
     <div id='cart-footer'>
-      <div className='foot-box'>
+      <div className={`foot-box ${type === 'cart' ? 'cart' : 'reserve'}`}>
         {
           type === 'cart' ? (
             <>

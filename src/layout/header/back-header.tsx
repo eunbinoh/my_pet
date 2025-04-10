@@ -9,7 +9,7 @@ const header = () => {
   return (
     <>
       <div className='header-back'>
-        <img src={arrowBackIcon} alt='back_icon' onClick={handleBack}/>
+        <img id='back-icon' alt='back_icon' src={arrowBackIcon} onClick={handleBack}/>
       </div>
     </>
   )

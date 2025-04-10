@@ -5,9 +5,10 @@ type HeaderProps = {
   tabTitles?: string[];
   handleTab?: (tabIndex: number) => void;
   targetTab?: number;
+  hiddenLogo?: boolean;
 };
 
-const header: React.FC<HeaderProps> = ({ hasHeadTab, tabTitles, handleTab, targetTab }) => {
+const header: React.FC<HeaderProps> = ({ hasHeadTab, tabTitles, handleTab, targetTab, hiddenLogo }) => {
   const [ activeTab, setActiveTab ] = useState<number>(targetTab ?? 0);
 
   const clickTabs = (tabIndex: number) => {
@@ -17,9 +18,13 @@ const header: React.FC<HeaderProps> = ({ hasHeadTab, tabTitles, handleTab, targe
 
   return (
     <>
-      <div className='header-area'>
-        <div className='logo'></div>
-      </div>
+      {
+        !hiddenLogo && (
+          <div className='header-area'>
+            <div className='logo'/>
+          </div>
+        )
+      }
 
       { hasHeadTab && tabTitles && (
         <div className='header-tabs'>

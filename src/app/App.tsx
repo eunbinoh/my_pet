@@ -14,6 +14,7 @@ import ShopList from '../pages/pet-shop/ShopList';
 import CareList from '../pages/pet-care/CareList';
 import ShopDetail from '../pages/pet-shop/ShopDetail';
 import CareDetail from '../pages/pet-care/CareDetail';
+import MyPet from '../pages/my-pet/MyPet';
 
 const App = () => {
   useLoadState();
@@ -28,7 +29,6 @@ const App = () => {
 const AppContent = () => {
   const location = useLocation();
   const path = location.pathname;
-  console.log(path)
 
   return (
     <>
@@ -37,14 +37,15 @@ const AppContent = () => {
         <Route path='/home' element={<Home/>} />
         <Route path='/shop' element={<PetShop/>} />
         <Route path='/shop-list' element={<ShopList/>} />
-        <Route path='/item-detail' element={<ShopDetail/>} />
+        <Route path='/shop-detail' element={<ShopDetail/>} />
         <Route path='/care' element={<PetCare/>} />
         <Route path='/care-list' element={<CareList/>} />
         <Route path='/care-detail' element={<CareDetail/>} />
+        <Route path='/my-pet' element={<MyPet/>} />
         <Route path='/signin' element={<SignIn/>} />
       </Routes>
       {
-        path === '/item-detail' ? (
+        path === '/shop-detail' ? (
           <Footer type='cart'/>
         ) : path === '/care-detail' ? (
           <Footer type='reserve'/>

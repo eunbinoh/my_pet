@@ -11,7 +11,7 @@ const ShopList = () => {
   const tabIndex = location.state?.tab ?? 0;
 
   const movePage = ( itemId : string) => {
-    navigate('/item-detail',{ state: { itemId }});
+    navigate('/shop-detail',{ state: { itemId }});
   }
 
   const handleMainTab = () => {
@@ -24,7 +24,7 @@ const ShopList = () => {
   return (
     <>
       <Header 
-        hasHeadTab={true} 
+        hasHeadTab
         handleTab={ handleMainTab } 
         tabTitles={['사료','간식']} 
         targetTab={tabIndex}

@@ -1,4 +1,4 @@
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import useItemStore from "../../shared/stores/userItemStore";
@@ -7,12 +7,12 @@ import Header from "../../layout/header/logo-header";
 
 const CareList = () => {
   const { hotItems, fetchItems } = useItemStore();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const location = useLocation();
   const tabIndex = location.state?.tab ?? 0;
-  // const movePage = ( path : string) => {
-  //   navigate(path)
-  // }
+  const movePage = ( itemId : string) => {
+    navigate('/care-detail',{ state: { itemId }});
+  }
 
   const handleMainTab = () => {
   }
@@ -24,7 +24,7 @@ const CareList = () => {
   return (
     <>
       <Header 
-        hasHeadTab={true} 
+        hasHeadTab
         handleTab={ handleMainTab } 
         tabTitles={['병원','반려동물 호텔','미용']}
         targetTab={tabIndex}
@@ -32,13 +32,13 @@ const CareList = () => {
       <div className='home-container'>
         <div className='item-list-box'>
             {
-              hotItems.map((hot) => (
-                <ItemBoxLineHalf key={hot.id} item={hot} onClick={()=>handleMainTab}/>
+              hotItems.map((item) => (
+                <ItemBoxLineHalf key={item.id} item={item} onClick={()=>movePage(item.id)}/>
               ))
             }
             {
-              hotItems.map((hot) => (
-                <ItemBoxLineHalf key={hot.id} item={hot} onClick={()=>handleMainTab}/>
+              hotItems.map((item) => (
+                <ItemBoxLineHalf key={item.id} item={item} onClick={()=>movePage(item.id)}/>
               ))
             }
         </div>

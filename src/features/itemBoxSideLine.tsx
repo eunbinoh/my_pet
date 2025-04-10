@@ -1,6 +1,6 @@
-const itemBoxSideLine = ({item, index}:any) => {
+const itemBoxSideLine = ({item, index, onClick}:{ item: any; index: number; onClick: () => void }) => {
   return (
-      <div className='item-line-side pointer'>
+      <div className='item-line-side pointer' onClick={onClick}>
         <div className='item-box'>
           <div className='img'>
           <div>{index+1}</div>

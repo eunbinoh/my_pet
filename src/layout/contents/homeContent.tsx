@@ -40,7 +40,7 @@ const homeContainer = ({children}: ContentsProps) => {
             ))
           }
           <hr/>
-          <span style={{marginTop:'15px'}} className='title_type_A'>추천 상품 더 보기 {'>'}</span>
+          <span style={{marginTop:'15px',marginBottom:'5px'}} className='title_type_more'>추천 상품 더 보기 {'>'}</span>
         </div>
 
         <div className='recommend-box'>
@@ -53,7 +53,7 @@ const homeContainer = ({children}: ContentsProps) => {
                 ))
             }
           <hr/>
-          <span style={{marginTop:'15px'}} className='title_type_A'>추천 병원 더 보기 {'>'}</span>
+          <span style={{marginTop:'15px',marginBottom:'10px'}} className='title_type_more'>추천 병원 더 보기 {'>'}</span>
         </div>
 
         <div className='round-card large pointer'>
