@@ -1,15 +1,8 @@
-import { useNavigate } from "react-router-dom";
 import Header from "../../layout/header/back-header";
 import myUserIcon from "@/assets/icon/my_user.svg";
 import cameraIcon from "@/assets/icon/camera.svg";
 
 const UserDetail = () => {
-  const navigate = useNavigate();
-
-  const moveToMenu = (path: string) => {
-    navigate(path);
-  };
-
   return (
     <>
       <Header />
