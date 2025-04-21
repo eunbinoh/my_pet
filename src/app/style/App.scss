@@ -390,7 +390,7 @@ button {
   }
   .content {
     padding: 0px 20px;
-    width: $screen-max-width;
+    width: $screen-base-width;
     .sub-menu {
       display: flex;
       align-items: center;
@@ -411,6 +411,13 @@ button {
   width: $screen-max-width;
   border-bottom: 3px solid #f5f5f5;
   margin: 40px 0px;
+}
+.my-10 {
+  margin: 40px 0px;
+}
+
+.status-box {
+  margin: 0px 0px 4px 2px;
 }
 
 .item-line-list {
@@ -440,6 +447,14 @@ button {
   }
   .item-context {
     margin-left: 12px;
+    .text-title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .text-price {
+      font-size: 16px;
+      font-weight: 700;
+    }
   }
 }
 
@@ -683,6 +698,11 @@ button {
   input {
     width: calc($screen-base-width - 20px);
   }
+}
+
+.text-sm {
+  font-size: 12px;
+  color: #555555;
 }
 
 .title_type_main {
