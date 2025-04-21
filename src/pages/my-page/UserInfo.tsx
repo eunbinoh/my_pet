@@ -21,7 +21,7 @@ const MyPage = () => {
       <div className="mypage-container">
         <div className="header">
           <div className="info-line">
-            <div className="user-image">
+            <div className="user-image small">
               <img id="user-icon" alt="user_icon" src={myUserIcon} />
             </div>
             <div className="user-info">
@@ -29,7 +29,7 @@ const MyPage = () => {
               <div className="user-email">{userInfo.email}</div>
             </div>
           </div>
-          <div className="edit-line">
+          <div className="edit-button">
             <button onClick={() => moveToMenu("/user-detail")}>
               내 정보 수정하기
             </button>

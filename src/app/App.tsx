@@ -39,7 +39,18 @@ const App = () => {
 const AppContent = () => {
   const location = useLocation();
   const path = location.pathname;
-
+  const footerType = () => {
+    switch (path) {
+      case "/user-detail":
+        return "profile";
+      case "/shop-detail":
+        return "cart";
+      case "/care-detail":
+        return "reserve";
+      default:
+        return "";
+    }
+  };
   return (
     <>
       <Routes>
@@ -58,13 +69,7 @@ const AppContent = () => {
         <Route path="/reservation-history" element={<ReservationHistory />} />
         <Route path="/signin" element={<SignIn />} />
       </Routes>
-      {path === "/shop-detail" ? (
-        <Footer type="cart" />
-      ) : path === "/care-detail" ? (
-        <Footer type="reserve" />
-      ) : (
-        <Gnb />
-      )}
+      {footerType() !== "" ? <Footer type={footerType()} /> : <Gnb />}
     </>
   );
 };

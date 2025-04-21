@@ -2,8 +2,35 @@ $screen-max-width: 370px;
 $screen-base-width: 330px;
 $home-recommend-height: 585px;
 
+input {
+  color: #999999;
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  height: 44px;
+  padding: 0px 8px;
+  font-size: 14px;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: #a9a9a9;
+  }
+  &::-webkit-input-placeholder {
+    color: #a9a9a9;
+  }
+  &::-moz-placeholder {
+    color: #a9a9a9;
+  }
+  &:-ms-input-placeholder {
+    color: #a9a9a9;
+  }
+}
 button {
   outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 .header-area {
   top: 0;
@@ -284,12 +311,8 @@ button {
       display: flex;
       width: $screen-base-width;
       align-items: center;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
       .user-image {
-        &__lg {
-          width: 100px;
-          height: 100px;
-        }
         width: 60px;
         height: 60px;
         border-radius: 50%;
@@ -320,7 +343,7 @@ button {
         }
       }
     }
-    .edit-line {
+    .edit-button {
       display: flexbox;
       width: $screen-base-width;
       display: flex;
@@ -335,9 +358,39 @@ button {
         border-radius: 8px;
       }
     }
+    .edit-line {
+      width: $screen-base-width;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .edit-profile {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 1px solid #ddd;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #user-icon {
+        width: 47px;
+        height: 53px;
+      }
+      #camera-icon {
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 80%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+    }
   }
   .content {
     padding: 0px 20px;
+    width: $screen-max-width;
     .sub-menu {
       display: flex;
       align-items: center;
@@ -601,6 +654,13 @@ button {
       width: $screen-base-width;
     }
   }
+  &.profile {
+    button {
+      width: $screen-base-width;
+      background-color: #000;
+      color: #fff;
+    }
+  }
 }
 
 .pointer {
@@ -612,7 +672,7 @@ button {
 }
 
 .input-line {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   padding-right: 20px;
   label {
     font-size: 13px;
@@ -621,18 +681,7 @@ button {
     font-weight: 500;
   }
   input {
-    width: $screen-base-width;
-    margin-right: 20px;
-  }
-  .full {
-    height: 48px !important;
-
-    background-color: #fff;
-    border: 1px solid #d4d4d4;
-    border-radius: 8px;
-    padding: 0px 8px;
-    font-size: 14px;
-    color: #a9a9a9;
+    width: calc($screen-base-width - 20px);
   }
 }
 
