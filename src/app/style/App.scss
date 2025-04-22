@@ -28,8 +28,18 @@ input {
 }
 button {
   outline: none;
+  color: #fff;
   &:focus {
     outline: none;
+  }
+  &::-webkit-button {
+    color: #a9a9a9;
+  }
+  &::-moz-button {
+    color: #a9a9a9;
+  }
+  &:-ms-button {
+    color: #a9a9a9;
   }
 }
 .header-area {
@@ -403,6 +413,22 @@ button {
         width: 12px;
         height: 20px;
         cursor: pointer;
+      }
+    }
+    .detail-box {
+      .line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        label {
+          font-size: 12px;
+          color: #999;
+        }
+        span {
+          font-size: 15px;
+          font-weight: 500;
+        }
       }
     }
   }

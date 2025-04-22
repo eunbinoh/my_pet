@@ -38,7 +38,10 @@ const MyPage = () => {
         <div className="gap-term" />
 
         <div className="content">
-          <div className="sub-menu">
+          <div
+            className="sub-menu pointer"
+            onClick={() => moveToMenu("/order-history")}
+          >
             주문내역
             <img
               id="right-icon"
@@ -48,7 +51,10 @@ const MyPage = () => {
               style={{ transform: "scaleX(-1)" }}
             />
           </div>
-          <div className="sub-menu">
+          <div
+            className="sub-menu pointer"
+            onClick={() => moveToMenu("/reservation-history")}
+          >
             예약내역
             <img
               id="right-icon"

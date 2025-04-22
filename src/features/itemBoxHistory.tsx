@@ -1,11 +1,14 @@
 const itemBoxHistory = (props: {
   item: OrderHistory | ReservationHistory;
-  type: "order" | "reserve";
+  type: "order" | "order-detail" | "reserve";
 }) => {
+  const type = props.type.indexOf("order") !== -1 ? "order" : "reserve";
+
   const item =
-    props.type === "order"
+    type === "order"
       ? (props.item as OrderHistory)
       : (props.item as ReservationHistory);
+
   const statusFilter = (status: string) => {
     if (status === "paid") {
       return "결제완료";
@@ -33,12 +36,12 @@ const itemBoxHistory = (props: {
         </div>
         <div className="item-context">
           <div className="text-sm">
-            {props.type === "order"
+            {type === "order"
               ? (item as OrderHistory).brandName
               : (item as ReservationHistory).date}
           </div>
           <div className="text-title">{item.itemName}</div>
-          {props.type === "order" && (
+          {type === "order" && (
             <>
               <div className="text-sm">
                 수량 : {(item as OrderHistory).quantity} 개
@@ -48,7 +51,7 @@ const itemBoxHistory = (props: {
               </div>
             </>
           )}
-          {props.type === "reserve" && (
+          {type === "reserve" && (
             <>
               <div className="text-price">
                 {(item as ReservationHistory).payMethod}

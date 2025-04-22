@@ -61,8 +61,9 @@ declare global {
     date: string;
     time: string;
     status: "complete" | "recept" | "cancel";
-    name: string;
+    ownerName: string;
     phone: string;
+    petName: string;
     birth: string;
     breed: string;
     note: string;

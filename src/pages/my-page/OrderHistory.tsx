@@ -1,40 +1,54 @@
 import Header from "../../layout/header/back-header";
 import { history } from "../../entities/history";
 import ItemBoxHistory from "../../features/itemBoxHistory";
+import { useNavigate } from "react-router-dom";
 
 const OrderHistory = () => {
+  const navigate = useNavigate();
   const items = history.items as OrderHistory[];
 
-  // const movePage = ( path : string) => {
-  //   navigate(path)
-  // }
+  const movePage = (path: string, item: OrderHistory) => {
+    navigate(path, { state: { item } });
+  };
 
   return (
     <>
       <Header />
       <div className="mypage-container">
         <div className="header">
-          <h3>2024.08.02</h3>
+          <h3>{items[0].date}</h3>
           <ItemBoxHistory item={items[0]} type="order" />
-          <button className="w-full">상세보기</button>
+          <button
+            className="w-full"
+            onClick={() => movePage("/order-detail", items[0])}
+          >
+            상세보기
+          </button>
         </div>
         <div className="gap-term" />
 
         <div className="header">
-          {items.map((item: OrderHistory) => {
-            return (
-              <>
-                <div className="recommend-box">
-                  <h3>2024.08.02</h3>
-                  <ItemBoxHistory item={item} type="order" key={item.id} />
-                </div>
-                <div className="edit-button">
-                  <button className="w-full">상세보기</button>
-                </div>
-                <hr className="my-10" />
-              </>
-            );
-          })}
+          {items
+            .filter((_, index) => index > 0)
+            .map((item: OrderHistory) => {
+              return (
+                <>
+                  <div className="recommend-box">
+                    <h3>{item.date}</h3>
+                    <ItemBoxHistory item={item} type="order" key={item.id} />
+                  </div>
+                  <div className="edit-button">
+                    <button
+                      className="w-full"
+                      onClick={() => movePage("/order-detail", item)}
+                    >
+                      상세보기
+                    </button>
+                  </div>
+                  <hr className="my-10" />
+                </>
+              );
+            })}
         </div>
       </div>
     </>

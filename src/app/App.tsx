@@ -25,6 +25,8 @@ import MyPage from "../pages/my-page/UserInfo";
 import UserDetail from "../pages/my-page/UserDetail";
 import OrderHistory from "../pages/my-page/OrderHistory";
 import ReservationHistory from "../pages/my-page/ReservationHistory";
+import OrderDetail from "../pages/my-page/OrderDetail";
+import ReservationDetail from "../pages/my-page/ReservationDetail";
 
 const App = () => {
   useLoadState();
@@ -66,7 +68,9 @@ const AppContent = () => {
         <Route path="/my-page" element={<MyPage />} />
         <Route path="/user-detail" element={<UserDetail />} />
         <Route path="/order-history" element={<OrderHistory />} />
+        <Route path="/order-detail" element={<OrderDetail />} />
         <Route path="/reservation-history" element={<ReservationHistory />} />
+        <Route path="/reservation-detail" element={<ReservationDetail />} />
         <Route path="/signin" element={<SignIn />} />
       </Routes>
       {footerType() !== "" ? <Footer type={footerType()} /> : <Gnb />}
