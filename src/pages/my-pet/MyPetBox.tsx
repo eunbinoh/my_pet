@@ -1,10 +1,16 @@
 import arrowDownIcon from "@/assets/icon/arrow_down.svg";
+import { useNavigate } from "react-router-dom";
 type MyPetBoxProps = {
   isOpen: boolean;
-  closeMyPetBox: () => void; // 이미지 클릭 핸들러 함수 타입 정의
+  closeMyPetBox: () => void;
 };
 
 const MyPetBox = ({ isOpen, closeMyPetBox }: MyPetBoxProps) => {
+  const navigate = useNavigate();
+  const moveToDetail = () => {
+    navigate("/my-pet-detail");
+  };
+
   return (
     <>
       <div className={`half-modal ${isOpen ? "active" : ""}`}>
@@ -19,7 +25,7 @@ const MyPetBox = ({ isOpen, closeMyPetBox }: MyPetBoxProps) => {
           <h3>마이펫 선택</h3>
           <div className="care-box">
             <div>
-              <div className="prifile-img" />
+              <div className="profile-img" />
             </div>
             <div>
               <div className="sub-title">이름(성별)</div>
@@ -31,7 +37,7 @@ const MyPetBox = ({ isOpen, closeMyPetBox }: MyPetBoxProps) => {
               <div>기타 특징 : 중성화</div>
             </div>
           </div>
-          <button>수정하기</button>
+          <button onClick={moveToDetail}>수정하기</button>
         </div>
       </div>
     </>

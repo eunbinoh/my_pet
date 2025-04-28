@@ -27,6 +27,7 @@ import OrderHistory from "../pages/my-page/OrderHistory";
 import ReservationHistory from "../pages/my-page/ReservationHistory";
 import OrderDetail from "../pages/my-page/OrderDetail";
 import ReservationDetail from "../pages/my-page/ReservationDetail";
+import MyPetDetail from "../pages/my-pet/MyPetDetail";
 
 const App = () => {
   useLoadState();
@@ -65,6 +66,7 @@ const AppContent = () => {
         <Route path="/care-list" element={<CareList />} />
         <Route path="/care-detail" element={<CareDetail />} />
         <Route path="/my-pet" element={<MyPet />} />
+        <Route path="/my-pet-detail" element={<MyPetDetail />} />
         <Route path="/my-page" element={<MyPage />} />
         <Route path="/user-detail" element={<UserDetail />} />
         <Route path="/order-history" element={<OrderHistory />} />

@@ -25,7 +25,25 @@ input {
   &:-ms-input-placeholder {
     color: #a9a9a9;
   }
+  &::-webkit-radio-button {
+    color: #a9a9a9;
+  }
 }
+input[type="radio"] {
+  display: inline-flex;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  border-color: #f4f4f4;
+  & + label {
+    cursor: pointer;
+  }
+  &:checked {
+    color: #fff;
+    background-color: #f4f4f4;
+    border-color: #f4f4f4;
+  }
+}
+
 button {
   outline: none;
   color: #fff;
@@ -441,6 +459,32 @@ button {
         }
       }
     }
+    .care-box {
+      margin-top: 4px;
+      width: 90px;
+      height: 90px;
+      border-radius: 12px;
+      background-color: #d9d9d9;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #add-icon {
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 80%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+    }
+    button {
+      margin: 10px 20px 0px 0px;
+      width: $screen-base-width;
+    }
+    margin-bottom: 120px;
   }
 }
 .gap-term {
@@ -726,13 +770,51 @@ button {
   margin-bottom: 16px;
   padding-right: 20px;
   label {
-    font-size: 13px;
+    font-size: 14px;
     color: #000;
     display: block;
     font-weight: 500;
   }
-  input {
+  input:not([type="radio"]) {
     width: calc($screen-base-width - 20px);
+  }
+}
+.radio-line {
+  margin-bottom: 28px;
+  .input-label {
+    p {
+      font-size: 14px;
+      color: #000;
+      font-weight: 500;
+      padding-top: 4px;
+    }
+  }
+  .radio-group {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.radio-group {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+
+  input[type="radio"] {
+    margin: 0;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+  }
+
+  label {
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    height: 20px;
+    margin: 0;
+    padding: 0px 20px 0px 8px;
   }
 }
 
@@ -747,6 +829,13 @@ button {
   cursor: pointer;
   text-align: start;
   display: flex;
+}
+.title_type_description {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: start;
+  display: flex;
+  margin-bottom: 32px;
 }
 
 .title_type_more {
@@ -773,7 +862,7 @@ button {
   position: fixed;
   z-index: 20;
   width: $screen-max-width;
-  height: 45%;
+  height: 47%;
   background-color: #fff;
   bottom: 0;
 
@@ -800,7 +889,7 @@ button {
     font-size: 12px;
     color: #555;
     line-height: 1.75;
-    .prifile-img {
+    .profile-img {
       width: 60px;
       height: 60px;
       border-radius: 12px;
