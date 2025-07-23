@@ -22,7 +22,7 @@ const gnb = () => {
         </div>
         <div className="menu-item" onClick={() => movePage("/care")}>
           <div className="icon" />
-          <label className="text-">Care</label>
+          <label style={{marginLeft:'4px'}}> Care</label>
         </div>
         <div className="menu-item" onClick={() => movePage("/my-page")}>
           <div className="icon" />

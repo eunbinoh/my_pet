@@ -40,7 +40,7 @@ const homeContainer = ({children}: ContentsProps) => {
           <h3>고객님을 위한 추천 상품</h3>
           {
             items.recommendItems.map((item,index)=> (
-              <ItemBoxListShort key={item.id} item={item} index={index} />
+              <ItemBoxListShort key={item.id} item={item} index={index}/>
             ))
           }
           <hr/>
@@ -53,7 +53,7 @@ const homeContainer = ({children}: ContentsProps) => {
               items.recommendHospitals
                 .filter((_, index) => index < 4)
                 .map((item)=> (
-                  <ItemBoxLineHalf key={item.id} item={item} onClick={()=>movePage('/item')}/>
+                  <ItemBoxLineHalf key={item.id} item={item} onClick={()=>movePage('/care')}/>
                 ))
             }
           <hr/>
