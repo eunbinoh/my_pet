@@ -3,37 +3,37 @@ export const items = {
     {
       id: 'item000001',
       brandName: 'BRAND_NAME1',
-      itemName: '차량용 강아지 방석',
+      itemName: '쿠키모양 수제 간식',
       price: 129000,
-      imgUrl: ''
+      imgUrl: 'snack1.jpg'
     },
     {
       id: 'item000002',
       brandName: 'BRAND_NAME2',
-      itemName: '고급 케이지 ',
+      itemName: '강아지용 스틱 스낵 ',
       price: 219000,
-      imgUrl: ''
+      imgUrl: 'snack2.jpg'
     },
     {
       id: 'item000003',
       brandName: 'BRAND_NAME3',
-      itemName: '대형견 에티켓 넥카라',
+      itemName: '과일맛 애견 캔디',
       price: 12000,
-      imgUrl: ''
+      imgUrl: 'snack3.jpg'
     },
     {
       id: 'item000004',
       brandName: 'BRAND_NAME4',
-      itemName: '강아지/고양이 공용 수제 간식',
+      itemName: '애견/애묘 공용 통조림',
       price: 49000,
-      imgUrl: ''
+      imgUrl: 'snack4.jpg'
     },
     {
       id: 'item000005',
       brandName: 'BRAND_NAME5',
-      itemName: '산책 줄 마우스 마스크',
+      itemName: '애견/애묘 통조림 미니',
       price: 129000,
-      imgUrl: ''
+      imgUrl: 'snack5.jpg'
     },
   ],
   recommendHospitals : [
@@ -43,7 +43,7 @@ export const items = {
       name: '월드펫동물종합병원',
       score: 4.7,
       reviews: 99,
-      imgUrl: ''
+      imgUrl: 'care1.jpg'
     },
     {
       id: 'hospital02',
@@ -51,7 +51,7 @@ export const items = {
       name: '펫러브동물병원',
       score: 4.7,
       reviews: 99,
-      imgUrl: ''
+      imgUrl: 'care2.jpg'
     },
     {
       id: 'hospital03',
@@ -59,7 +59,7 @@ export const items = {
       name: '24시응급펫센터',
       score: 4.7,
       reviews: 99,
-      imgUrl: ''
+      imgUrl: 'care3.jpg'
     },
     {
       id: 'hospital04',
@@ -67,7 +67,7 @@ export const items = {
       name: '강아지동물병원',
       score: 4.7,
       reviews: 99,
-      imgUrl: ''
+      imgUrl: 'care4.jpg'
     },
     {
       id: 'hospital05',
@@ -75,7 +75,7 @@ export const items = {
       name: '고양이종합병원',
       score: 4.7,
       reviews: 99,
-      imgUrl: ''
+      imgUrl: 'care1.jpg'
     },
   ],
   hotItems : [
@@ -84,7 +84,7 @@ export const items = {
       brandName: 'BRAND_NAME1',
       itemName: '차량용 강아지 방석',
       price: 129000,
-      imgUrl: '',
+      imgUrl: 'meal1.jpg',
       score: 4.7,
       reviews: 99,
     },
@@ -93,7 +93,7 @@ export const items = {
       brandName: 'BRAND_NAME2',
       itemName: '고급 케이지 ',
       price: 219000,
-      imgUrl: '',
+      imgUrl: 'meal2.jpg',
       score: 4.7,
       reviews: 99,
     },
@@ -102,7 +102,7 @@ export const items = {
       brandName: 'BRAND_NAME3',
       itemName: '대형견 에티켓 넥카라',
       price: 12000,
-      imgUrl: '',
+      imgUrl: 'meal3.jpg',
       score: 4.7,
       reviews: 99,
     },
@@ -111,7 +111,7 @@ export const items = {
       brandName: 'BRAND_NAME4',
       itemName: '강아지/고양이 공용 수제 간식',
       price: 49000,
-      imgUrl: '',
+      imgUrl: 'meal4.jpg',
       score: 4.7,
       reviews: 99,
     },
@@ -120,7 +120,7 @@ export const items = {
       brandName: 'BRAND_NAME5',
       itemName: '산책 줄 마우스 마스크',
       price: 129000,
-      imgUrl: '',
+      imgUrl: 'meal5.jpg',
       score: 4.7,
       reviews: 99,
     },
@@ -129,7 +129,7 @@ export const items = {
       brandName: 'BRAND_NAME6',
       itemName: '휴대용 배변패드',
       price: 129000,
-      imgUrl: '',
+      imgUrl: 'meal6.jpg',
       score: 4.7,
       reviews: 99,
     },
@@ -138,7 +138,7 @@ export const items = {
       brandName: 'BRAND_NAME7',
       itemName: '산책용 물그릇',
       price: 129000,
-      imgUrl: '',
+      imgUrl: 'meal7.jpg',
       score: 4.7,
       reviews: 99,
     },
@@ -149,7 +149,7 @@ export const items = {
       brandName: 'BRAND_NAME1',
       itemName: '차량용 강아지 방석',
       price: 129000,
-      imgUrl: '',
+      imgUrl: 'meal8.jpg',
       score: 4.7,
       reviews: 99,
     },
@@ -158,7 +158,7 @@ export const items = {
       brandName: 'BRAND_NAME2',
       itemName: '고급 케이지 ',
       price: 219000,
-      imgUrl: '',
+      imgUrl: 'meal9.jpg',
       score: 4.7,
       reviews: 99,
     },

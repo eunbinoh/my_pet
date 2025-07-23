@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from '../../assets/image/logo.png';
 
 type HeaderProps = {
   hasHeadTab?: boolean;
@@ -21,7 +22,9 @@ const header: React.FC<HeaderProps> = ({ hasHeadTab, tabTitles, handleTab, targe
       {
         !hiddenLogo && (
           <div className='header-area'>
-            <div className='logo'/>
+            <div className='logo'>
+              <img src={logo} alt='logo' />
+            </div>
           </div>
         )
       }

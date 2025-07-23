@@ -65,12 +65,17 @@ button {
   display: flex;
   height: 60px;
   width: $screen-max-width;
+  background-image: url('../../assets/image/bg.png');
+  background-size:contain;
 
   .logo {
-    margin: 10px auto;
-    width: 120px;
-    height: 40px;
-    background-color: #d9d9d9;
+    margin: 0px auto;
+    width: 200px;
+    height: 68px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
   }
   .logo:hover {
     background-color: lightgrey;
@@ -130,7 +135,7 @@ button {
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 12px;
     margin-bottom: 20px;
     button {
       color: #000;
@@ -150,7 +155,7 @@ button {
   .round-card {
     background-color: #d9d9d9;
     border-radius: 8px;
-    padding: 0px 10px;
+    // padding: 0px 10px;
     &.small {
       height: 80px;
     }
@@ -161,6 +166,34 @@ button {
         margin-bottom: 0px;
       }
     }
+  }
+  .nav-button {
+    flex: 1;
+    padding: 20px;
+    border: none;
+    border-radius: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+  .round-button {
+    background: linear-gradient(125deg, #252357, #bfac1b );
+    color: white !important;
+    box-shadow: 0 5px 5px #6e6d64;
+  }
+  .round-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 10px #252357;
+}
+  .main-banner-img {
+    width: 330px;
+    height: 117px;
+    object-fit: cover;
+    border-radius: 8px;
   }
 
   .recommend-box {
@@ -500,24 +533,33 @@ button {
   margin: 0px 0px 4px 2px;
 }
 
-.item-line-list {
+.product-item {
   display: inline-flex;
   margin-bottom: 20px;
+  align-items: center;
+  padding: 18px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 270px;
+
   .item-box {
-    div {
-      width: 16px;
-      height: 16px;
-      color: black;
-      font-size: 14px;
-      font-weight: 700;
-      text-align: center;
-      background-color: white;
-      border-color: white;
-      border-top-left-radius: 8px;
-      border-bottom-right-radius: 8px;
-      position: absolute;
-    }
-    .img {
+    img {
+      div {
+        width: 16px;
+        height: 16px;
+        color: black;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        background-color: white;
+        border-color: white;
+        border-top-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        // position: absolute;
+      }
       width: 72px;
       height: 72px;
       border-radius: 8px;
@@ -538,6 +580,12 @@ button {
   }
 }
 
+.product-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+  
+
 .item-line-half {
   display: inline-block;
   width: calc(50% - 10px);
@@ -551,6 +599,12 @@ button {
     background-color: #d9d9d9;
     border-radius: 8px;
     position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   .info_place {
     color: #555555;
@@ -640,7 +694,11 @@ button {
 }
 
 .banner-paging {
-  display: flex;
+  position: absolute;
+  top: 110px;
+  right: 0px;
+  z-index: 2;
+  display: relative;
   float: right;
   padding-right: 15px;
   padding-top: 35px;
@@ -667,6 +725,7 @@ button {
 }
 
 .banner-box {
+  position: relative;
   background-color: #d9d9d9;
   width: $screen-max-width;
   height: 170px;
@@ -678,6 +737,13 @@ button {
     justify-content: center;
     font-size: 18px;
     font-weight: 700;
+  }
+  .title-banner-img {
+    display: absolute;
+    img{
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 

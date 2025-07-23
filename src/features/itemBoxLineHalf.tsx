@@ -1,7 +1,13 @@
 const itemBoxLineHalf = ({item, onClick}: { item: any; onClick: () => void }) => {
+  const getImageUrl = (imageName: string) => {
+    return new URL(`../assets/image/care/${imageName}`, import.meta.url).href;
+  };
+  
   return (
     <div className='item-line-half pointer' onClick={onClick}>
-        <div className='item-box'/>
+        <div className='item-box'>
+          <img src={getImageUrl(item.imgUrl)} alt='item' />
+        </div>
         <div className='info_place'>{ item.brandName }</div>
         <div className='info_name'>{ item.itemName }</div>
         <div className='score_review_line'>
