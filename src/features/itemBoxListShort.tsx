@@ -1,4 +1,4 @@
-const itemBoxListShort = ({item, index}:any) => {
+const itemBoxListShort = ({item}:any) => {
   const getImageUrl = (imageName: string) => {
     return new URL(`../assets/image/snack/${imageName}`, import.meta.url).href;
   };
