@@ -1,4 +1,4 @@
-const itemBoxSideLine = ({item, index, onClick}:{ item: any; index: number; onClick: () => void }) => {
+const itemBoxSideLine = ({item, onClick}:{ item: any; onClick: () => void }) => {
   const getImageUrl = (imageName: string) => {
     if(item.id.indexOf('hotItems') > -1) {
       return new URL(`../assets/image/meal/${imageName}`, import.meta.url).href;
