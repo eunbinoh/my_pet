@@ -3,11 +3,12 @@ import { useEffect } from "react";
 import useItemStore from "../../shared/stores/userItemStore";
 import ItemBoxSideLine from '../../features/itemBoxSideLine';
 import Header from "../../layout/header/logo-header";
+import mealImgBanner from '../../assets/image/meal/meal4.jpg';
+import banner1 from '../../assets/image/banner1.png';
 
 const PetShop = () => {
   const { hotItems, newItems, fetchItems } = useItemStore();
   const navigate = useNavigate();
-  
   
   const moveToList = ( path : string, tab? : number) => {
     navigate(path, tab ? { state: { tab }} : {});
@@ -28,42 +29,16 @@ const PetShop = () => {
     <>
       <Header hasHeadTab handleTab={ handleMainTab } tabTitles={['푸드','헬스']}/>
       <div className='banner-box'>
-        <h3>Banner</h3>
+        <img src={mealImgBanner} alt='banner' style={{width:'100%',height:'100%'}}/>
       </div>
       <div className='home-container'>
         <div className='inline-split'>
-          <button className='half round-card small pointer' onClick={()=>moveToList('/shop-list',0)}>
+          <button className='half nav-button round-button small pointer' onClick={()=>moveToList('/shop-list',0)}>
             사료
           </button>
-          <button className='half round-card small pointer' onClick={()=>moveToList('/shop-list',1)}>
+          <button className='half nav-button round-button small pointer' onClick={()=>moveToList('/shop-list',1)}>
             간식
           </button>
-        </div>
-
-        <div className='marketing-item-box'>
-          <h3>현재 HOT한 상품 TOP7</h3>
-          <div className='side-inline'>
-          {
-            hotItems
-            .map((item,index)=> (
-              <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
-            ))
-          }
-          </div>
-        </div>
-        <div className='marketing-item-box'>
-          <h3>지금 집중해야할 신상품 TOP7</h3>
-          <div className='side-inline'>
-            {
-              newItems.map((item,index:number) => (
-                <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
-              ))
-            }
-          </div>
-        </div>
-        <div className='round-card large pointer'>
-          <h2>Banner</h2>
-          <span>이벤트 배너 영역입니다.</span>
         </div>
 
         <div className='marketing-item-box'>
@@ -79,6 +54,32 @@ const PetShop = () => {
 
         <div className='marketing-item-box'>
           <h3>인기 간식(영양간식) TOP7</h3>
+          <div className='side-inline'>
+            {
+              newItems.map((item,index:number) => (
+                <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
+              ))
+            }
+          </div>
+        </div>
+
+        <div className='round-card large pointer' style={{marginTop:'30px'}}>
+        <img src={banner1} alt='banner' className='main-banner-img' />
+        </div>
+
+        <div className='marketing-item-box'>
+          <h3>현재 HOT한 상품 TOP7</h3>
+          <div className='side-inline'>
+          {
+            hotItems
+            .map((item,index)=> (
+              <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
+            ))
+          }
+          </div>
+        </div>
+        <div className='marketing-item-box'>
+          <h3>지금 집중해야할 신상품 TOP7</h3>
           <div className='side-inline'>
             {
               newItems.map((item,index:number) => (

@@ -24,7 +24,7 @@ const homeContainer = ({children}: ContentsProps) => {
         <BannerPaging />
       </div>
       <div className='home-container'>
-        <div className='inline-split'>
+        <div className='inline-split' style={{paddingTop:'10px'}}>
           <button className='half nav-button round-button pointer' onClick={()=>movePage('/shop')}>
             Shop
           </button>

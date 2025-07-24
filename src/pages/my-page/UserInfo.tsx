@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import Header from "../../layout/header/back-header";
-import myUserIcon from "@/assets/icon/my_user.svg";
 import arrowLeftIcon from "@/assets/icon/arrow_back.svg";
+import hotel3 from '../../assets/image/hotel/hotel3.jpg';
 
 const MyPage = () => {
   const navigate = useNavigate();
 
   const userInfo = {
-    name: "홍길동",
-    email: "hongguildong@gmail.com",
+    name: "코코엄마",
+    email: "kokoMom9@gmail.com",
   };
 
   const moveToMenu = (path: string) => {
@@ -21,8 +21,8 @@ const MyPage = () => {
       <div className="mypage-container">
         <div className="header">
           <div className="info-line">
-            <div className="user-image small">
-              <img id="user-icon" alt="user_icon" src={myUserIcon} />
+            <div className="user-image">
+              <img id="user-icon" src={hotel3} alt='profile' style={{width:'100%',height:'100%', borderRadius:'50px'}}/>
             </div>
             <div className="user-info">
               <div className="user-name">{userInfo.name}</div>

@@ -2,7 +2,9 @@ const footer = () => {
   return (
     <>
       <div className='foot-info'>
-        <div className='foot-logo'></div>
+        <div className='foot-logo'>
+          FOR MY PET
+        </div>
 
         <div>
           <span>고객센터</span>
@@ -29,7 +31,7 @@ const footer = () => {
         <div>
           <span>주소</span>
           <span className='bar'>|</span>
-          <span>서울시 종로구 사근동 01-10</span>
+          <span>서울시 종로구 리액트 20-25</span>
         </div>
 
       </div>

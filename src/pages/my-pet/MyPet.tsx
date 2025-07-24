@@ -49,7 +49,7 @@ const MyPet = () => {
     <>
       <div className="header-back">
         <div className="header-back-title" onClick={handleMypetBox}>
-          반려동물이름
+          반려동물 선택
           <img alt="arrow-down-icon" src={arrowDownIcon} />
         </div>
       </div>

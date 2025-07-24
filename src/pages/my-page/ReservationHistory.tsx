@@ -18,7 +18,7 @@ const ReservationHistory = () => {
         <div className="header">
           <ItemBoxHistory item={items[0]} type="reserve" />
           <button
-            className="w-full"
+            style={{ width: "350px", marginTop: "20px" }}
             onClick={() => movePage("/reservation-detail", items[0])}
           >
             상세보기
@@ -37,7 +37,7 @@ const ReservationHistory = () => {
                   </div>
                   <div className="edit-button">
                     <button
-                      className="w-full"
+                      style={{ width: "350px", marginTop: "10px" }}
                       onClick={() => movePage("/reservation-detail", item)}
                     >
                       상세보기

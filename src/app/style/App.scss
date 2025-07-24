@@ -1,5 +1,5 @@
-$screen-max-width: 370px;
-$screen-base-width: 330px;
+$screen-max-width: 400px;
+$screen-base-width: 390px;
 $home-recommend-height: 585px;
 
 input {
@@ -64,7 +64,7 @@ button {
   top: 0;
   display: flex;
   height: 68px;
-  width: $screen-max-width;
+  width: $screen-base-width;
   background-image: url('../../assets/image/bg.png');
   background-size:contain;
 
@@ -86,7 +86,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 10px 0px 20px auto;
+  margin: 15px 0px 10px auto;
 
   button {
     width: fit-content;
@@ -127,8 +127,8 @@ button {
 }
 
 .home-container {
-  margin: 20px 20px 100px;
-  width: $screen-base-width;
+  margin: 20px 10px 100px 10px;
+  width: 370px;
   display: flexbox;
 
   .inline-split {
@@ -190,7 +190,7 @@ button {
     box-shadow: 0 10px 10px #252357;
 }
   .main-banner-img {
-    width: 330px;
+    width: 370px;
     height: 117px;
     object-fit: cover;
     border-radius: 8px;
@@ -201,7 +201,7 @@ button {
     background-color: #f5f5f5;
     border-radius: 8px;
     padding: 10px 10px;
-    width: 310px;
+    width: 350px;
     ul {
       padding-left: 0;
     }
@@ -209,7 +209,7 @@ button {
       background-color: #fff;
       border-radius: 8px;
       padding: 20px 20px;
-      width: 260px;
+      width: 310px;
       margin-bottom: 10px;
       display: grid;
       grid-template-columns: 1fr auto;
@@ -241,11 +241,11 @@ button {
   .care-container {
     padding-top: 20px;
     button {
-      width: $screen-base-width;
+      width: $screen-base-width - 20px;
     }
     .care-box {
       padding: 20px 20px;
-      width: $screen-base-width - 40px;
+      width: $screen-base-width - 60px;
       .sub-title {
         font-size: 14px;
         font-weight: 600;
@@ -291,8 +291,8 @@ button {
 
   .marketing-item-box {
     margin-top: 16px;
-    height: 305px;
-    width: $screen-max-width;
+    height: 240px;
+    width: $screen-base-width;
     overflow: hidden;
   }
   .marketing-item-box::-webkit-scrollbar {
@@ -312,7 +312,7 @@ button {
   }
   margin-bottom: 100px;
   .image-main {
-    width: $screen-max-width;
+    width: $screen-base-width;
     height: 310px;
     background-color: #d9d9d9;
     margin-bottom: 20px;
@@ -418,9 +418,8 @@ button {
       display: flexbox;
       width: $screen-base-width;
       display: flex;
-      justify-content: center;
       button {
-        width: 100%;
+        width: $screen-base-width - 80px;
         height: 40px;
         font-size: 12px;
         color: #555555;
@@ -461,7 +460,7 @@ button {
   }
   .content {
     padding: 0px 20px;
-    width: $screen-base-width;
+    width: $screen-base-width - 50px;
     .sub-menu {
       display: flex;
       align-items: center;
@@ -521,7 +520,7 @@ button {
   }
 }
 .gap-term {
-  width: $screen-max-width;
+  width: $screen-base-width;
   border-bottom: 3px solid #f5f5f5;
   margin: 40px 0px;
 }
@@ -543,7 +542,7 @@ button {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  width: 270px;
+  width: 310px;
 
   .item-box {
     img {
@@ -638,7 +637,7 @@ button {
   white-space: nowrap;
   box-sizing: border-box;
 
-  max-width: 330px;
+  max-width: 368px;
   margin: 0 0px;
 }
 
@@ -727,7 +726,7 @@ button {
 .banner-box {
   position: relative;
   background-color: #d9d9d9;
-  width: $screen-max-width;
+  width: $screen-base-width;
   height: 170px;
   display: flexbox;
   text-align: center;
@@ -756,10 +755,12 @@ button {
   color: #555555;
 
   .foot-logo {
-    background-color: #d9d9d9;
-    width: 80px;
-    height: 24px;
-    margin-bottom: 15px;
+    background-color: #d9d9d9a3;
+    width: 70px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    padding-top: 3px;
+    padding-left: 3px;
   }
   .bar {
     color: #d9d9d9;
@@ -772,7 +773,7 @@ button {
   position: fixed;
   bottom: 0;
   height: 66px;
-  min-width: $screen-max-width;
+  min-width: $screen-base-width;
   display: inline-flex;
   justify-content: space-around;
   align-items: center;
@@ -836,7 +837,7 @@ button {
   bottom: 0;
   background-color: white;
   height: 66px;
-  min-width: $screen-max-width;
+  min-width: $screen-base-width;
   display: inline-flex;
   justify-content: center;
   gap: 8px;
@@ -967,7 +968,7 @@ button {
   display: none;
   position: fixed;
   z-index: 20;
-  width: $screen-max-width;
+  width: $screen-base-width;
   height: 47%;
   background-color: #fff;
   bottom: 0;
@@ -983,8 +984,8 @@ button {
   }
   .care-box {
     margin: 0px 20px;
-    padding: 20px 10px;
-    width: calc($screen-base-width - 20px);
+    padding: 10px 10px;
+    width: calc($screen-base-width - 60px);
     display: inline-flex;
     background-color: #f5f5f5;
     border-radius: 4px;
@@ -1005,7 +1006,7 @@ button {
   }
   button {
     margin: 10px 20px 0px 20px;
-    width: $screen-base-width;
+    width: $screen-base-width - 40px;
   }
   &.active {
     display: block;

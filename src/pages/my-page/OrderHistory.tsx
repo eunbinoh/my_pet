@@ -19,7 +19,7 @@ const OrderHistory = () => {
           <h3>{items[0].date}</h3>
           <ItemBoxHistory item={items[0]} type="order" />
           <button
-            className="w-full"
+            style={{ width: "350px", marginTop: "20px" }}
             onClick={() => movePage("/order-detail", items[0])}
           >
             상세보기
@@ -39,7 +39,7 @@ const OrderHistory = () => {
                   </div>
                   <div className="edit-button">
                     <button
-                      className="w-full"
+                      style={{ width: "350px", marginTop: "10px" }}
                       onClick={() => movePage("/order-detail", item)}
                     >
                       상세보기

@@ -1,23 +1,23 @@
 /*
   Viewport common
 */
-$container-margin-x: 20px; 
+$container-margin-x: 16px; 
 
 /*
   Mobile
 */
 $container-mobile: 100%;
-$breakpoint-mobile-min: 300px;
-$breakpoint-mobile-max: 360px;
+$breakpoint-mobile-min: 390px;
+$breakpoint-mobile-max: 390px;
 
 /*
   Web
 */
-$container-web: 390px;
-$breakpoint-web-min: 361px;
+$container-web: 400px;
+$breakpoint-web-min: 391px;
 
-$max-width-web-to-mobile: 360px;
-$min-width-mobile: 360px;
+$max-width-web-to-mobile: 390px;
+$min-width-mobile: 390px;
 
 /*
   header height
