@@ -4,9 +4,10 @@ import { useLocation } from 'react-router-dom';
 import useItemStore from "../../shared/stores/userItemStore";
 import ItemBoxLineHalf from '../../features/itemBoxLineHalf';
 import Header from "../../layout/header/logo-header";
+import { items } from '../../entities/items';
 
 const CareList = () => {
-  const { hotItems, fetchItems } = useItemStore();
+  const { fetchItems } = useItemStore();
   const navigate = useNavigate();
   const location = useLocation();
   const tabIndex = location.state?.tab ?? 0;
@@ -32,12 +33,12 @@ const CareList = () => {
       <div className='home-container'>
         <div className='item-list-box'>
             {
-              hotItems.map((item) => (
+              items.beauty.map((item) => (
                 <ItemBoxLineHalf key={item.id} item={item} onClick={()=>movePage(item.id)}/>
               ))
             }
             {
-              hotItems.map((item) => (
+              items.beauty.map((item) => (
                 <ItemBoxLineHalf key={item.id} item={item} onClick={()=>movePage(item.id)}/>
               ))
             }
