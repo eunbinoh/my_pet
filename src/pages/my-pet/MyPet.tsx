@@ -164,11 +164,10 @@ const MyPet = () => {
           <div className="marketing-item-box">
             <h3>추천 영양제</h3>
             <div className="side-inline">
-              {hotItems.map((item, index) => (
+              {hotItems.map((item) => (
                 <ItemBoxSideLine
                   key={item.id}
                   item={item}
-                  index={index}
                   onClick={() => moveToDetail(item.id)}
                 />
               ))}

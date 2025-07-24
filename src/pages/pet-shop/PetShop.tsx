@@ -45,8 +45,8 @@ const PetShop = () => {
           <h3>인기 사료(영양/보조제) TOP7</h3>
           <div className='side-inline'>
             {
-              hotItems.map((item,index:number) => (
-                <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
+              hotItems.map((item) => (
+                <ItemBoxSideLine key={item.id} item={item} onClick={()=>moveToDetail(item.id)}/>
               ))
             }
             </div>
@@ -56,8 +56,8 @@ const PetShop = () => {
           <h3>인기 간식(영양간식) TOP7</h3>
           <div className='side-inline'>
             {
-              newItems.map((item,index:number) => (
-                <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
+              newItems.map((item) => (
+                <ItemBoxSideLine key={item.id} item={item} onClick={()=>moveToDetail(item.id)}/>
               ))
             }
           </div>
@@ -72,8 +72,8 @@ const PetShop = () => {
           <div className='side-inline'>
           {
             hotItems
-            .map((item,index)=> (
-              <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
+            .map((item) => (
+              <ItemBoxSideLine key={item.id} item={item} onClick={()=>moveToDetail(item.id)}/>
             ))
           }
           </div>
@@ -82,8 +82,8 @@ const PetShop = () => {
           <h3>지금 집중해야할 신상품 TOP7</h3>
           <div className='side-inline'>
             {
-              newItems.map((item,index:number) => (
-                <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
+              newItems.map((item) => (
+                <ItemBoxSideLine key={item.id} item={item} onClick={()=>moveToDetail(item.id)}/>
               ))
             }
           </div>

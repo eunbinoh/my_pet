@@ -51,8 +51,8 @@ const PetShop = () => {
           <div className='side-inline'>
           {
             items.recommendHospitals
-            .map((item,index)=> (
-              <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
+            .map((item) => (
+              <ItemBoxSideLine key={item.id} item={item} onClick={()=>moveToDetail(item.id)}/>
             ))
           }
           </div>
@@ -66,8 +66,8 @@ const PetShop = () => {
           <h3>인기 호텔 TOP7</h3>
           <div className='side-inline'>
             {
-              items.hotel.map((item,index:number) => (
-                <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
+              items.hotel.map((item) => (
+                <ItemBoxSideLine key={item.id} item={item} onClick={()=>moveToDetail(item.id)}/>
               ))
             }
             </div>
@@ -77,8 +77,8 @@ const PetShop = () => {
           <h3>인기 미용 TOP7</h3>
           <div className='side-inline'>
             {
-              items.beauty.map((item,index:number) => (
-                <ItemBoxSideLine key={item.id} item={item} index={index} onClick={()=>moveToDetail(item.id)}/>
+              items.beauty.map((item) => (
+                <ItemBoxSideLine key={item.id} item={item} onClick={()=>moveToDetail(item.id)}/>
               ))
             }
           </div>
