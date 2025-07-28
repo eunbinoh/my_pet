@@ -86,7 +86,7 @@ export const items = {
       price: 129000,
       imgUrl: 'meal6.jpg',
       score: 4.7,
-      reviews: 99,
+      reviews: 20,
     },
     {
       id: 'hotItems0000002',
@@ -94,8 +94,8 @@ export const items = {
       itemName: '대형견 닭고기 사료 ',
       price: 219000,
       imgUrl: 'meal2.jpg',
-      score: 4.7,
-      reviews: 99,
+      score: 5.0,
+      reviews: 0,
     },
     {
       id: 'hotItems0000003',
@@ -103,8 +103,8 @@ export const items = {
       itemName: '비건 콩고기 사료',
       price: 12000,
       imgUrl: 'meal3.jpg',
-      score: 4.7,
-      reviews: 99,
+      score: 3.0,
+      reviews: 2,
     },
     {
       id: 'hotItems0000004',
@@ -112,8 +112,8 @@ export const items = {
       itemName: '8가지 믹스 + 그릇 증정',
       price: 49000,
       imgUrl: 'meal7.jpg',
-      score: 4.7,
-      reviews: 99,
+      score: 4.0,
+      reviews: 11,
     },
     {
       id: 'hotItems0000005',
@@ -121,8 +121,8 @@ export const items = {
       itemName: '연어맛 오메가3 사료',
       price: 129000,
       imgUrl: 'meal9.jpg',
-      score: 4.7,
-      reviews: 99,
+      score: 4.9,
+      reviews: 22,
     },
     {
       id: 'hotItems0000006',
@@ -130,8 +130,8 @@ export const items = {
       itemName: '휴대용 봉지 사료 파우치',
       price: 129000,
       imgUrl: 'meal8.jpg',
-      score: 4.7,
-      reviews: 99,
+      score: 4.1,
+      reviews: 2,
     },
     {
       id: 'hotItems0000007',
@@ -140,7 +140,7 @@ export const items = {
       price: 129000,
       imgUrl: 'meal1.jpg',
       score: 4.7,
-      reviews: 99,
+      reviews: 20,
     },
   ],
   newItems : [

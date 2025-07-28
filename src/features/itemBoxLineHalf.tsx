@@ -4,7 +4,9 @@ const itemBoxLineHalf = ({item, onClick}: { item: any; onClick: () => void }) =>
       return new URL(`../assets/image/meal/${imageName}`, import.meta.url).href;
     } else if(item.id.indexOf('beauty') > -1) {
       return new URL(`../assets/image/beauty/${imageName}`, import.meta.url).href;
-    } 
+    } else if(item.id.indexOf('hospital') > -1) {
+      return new URL(`../assets/image/care/${imageName}`, import.meta.url).href;
+    }
   };
   
   return (
